@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moisturizer | GLOWORA Skincare</title>
+<link href="./style.css" rel="stylesheet"/>
+<script src="./script.js" defer></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+<link href="./product-page.css" rel="stylesheet"/></head>
+<body>
+<header class="site-header" id="home">
+<!-- Announcement Bar -->
+<div class="announcement">
+<p class="announcement-desktop">
+            ✧ Free Shipping on Orders Over Rs. 5,000
+            <span>|</span>
+            Nature's Care, Your Skin's Future ✧
+        </p>
+<p class="announcement-mobile">
+            ✧ Free Shipping on Orders Over Rs. 5,000 ✧
+        </p>
+</div>
+<!-- Main Header -->
+<div class="header-main">
+<!-- Mobile Hamburger -->
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+<i aria-hidden="true" class="fa-solid fa-bars"></i>
+</button>
+<!-- Logo -->
+<a aria-label="GLOWORA Home" class="logo" href="./index.html">
+<span aria-hidden="true" class="logo-leaf">❧</span>
+<span>GLOWORA</span>
+</a>
+<!-- Desktop Search -->
+<form action="./index.html" class="header-search" role="search">
+<input aria-label="Search skincare products" name="search" placeholder="Search skincare products..." type="search"/>
+<button aria-label="Search" type="submit">
+<i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+</button>
+</form>
+<!-- Account and Cart -->
+<div class="header-actions">
+<!-- Account button -->
+<button aria-label="Open account panel" class="account-action" data-open-panel="account" type="button">
+<i aria-hidden="true" class="fa-regular fa-user"></i>
+<span class="account-text">
+<small>Welcome</small>
+<strong>Login / Register</strong>
+</span>
+</button>
+<!-- Cart button -->
+<button aria-label="Open shopping cart" class="cart-action" data-open-panel="cart" type="button">
+<i aria-hidden="true" class="fa-solid fa-bag-shopping"></i>
+<span class="cart-text">Cart</span>
+<span aria-live="polite" class="cart-count">0</span>
+</button>
+</div>
+</div>
+<!-- Desktop Navigation -->
+<nav aria-label="Main navigation" class="desktop-nav">
+<ul class="nav-links"><li><a href="./index.html">Shop All</a></li><li><a href="./serum.html">Serum</a></li><li><a href="./moisturizer.html">Moisturizer</a></li><li><a href="./cleanser.html">Cleanser</a></li><li><a href="./face-mask.html">Face Mask</a></li><li><a href="./bright-eye-cream.html">Bright Eye Cream</a></li><li><a href="./toner.html">Toner</a></li><li><a href="./sunscreen.html">Sunscreen</a></li><li><a href="./body-wash.html">Body Wash</a></li><li><a href="./routine.html">Routine Guide</a></li><li><a href="./about.html">About Us</a></li></ul>
+</nav>
+<!-- Overlay -->
+<div class="menu-overlay"></div>
+<!-- Right-side Off-canvas Menu -->
+<aside aria-hidden="true" aria-label="Mobile navigation" class="mobile-menu" id="mobile-menu" inert="">
+<div class="mobile-menu-header">
+<a class="mobile-menu-logo" href="./index.html">
+<span aria-hidden="true">❧</span> GLOWORA
+            </a>
+<button aria-label="Close navigation menu" class="menu-close" type="button">
+                ×
+            </button>
+</div>
+<p class="mobile-menu-caption">
+            YOUR SKIN, YOUR NATURAL GLOW
+        </p>
+<!-- Mobile Search -->
+<form action="./index.html" class="mobile-search" role="search">
+<input aria-label="Search products" name="search" placeholder="Search products..." type="search"/>
+<button aria-label="Search" type="submit">
+<i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+</button>
+</form>
+<!-- Mobile Links -->
+<ul class="mobile-nav-links"><li><a href="./index.html">Shop All <span>↗</span></a></li><li><a href="./serum.html">Serum <span>↗</span></a></li><li><a href="./moisturizer.html">Moisturizer <span>↗</span></a></li><li><a href="./cleanser.html">Cleanser <span>↗</span></a></li><li><a href="./face-mask.html">Face Mask <span>↗</span></a></li><li><a href="./bright-eye-cream.html">Bright Eye Cream <span>↗</span></a></li><li><a href="./toner.html">Toner <span>↗</span></a></li><li><a href="./sunscreen.html">Sunscreen <span>↗</span></a></li><li><a href="./body-wash.html">Body Wash <span>↗</span></a></li><li><a href="./routine.html">Routine Guide <span>↗</span></a></li><li><a href="./about.html">About Us <span>↗</span></a></li></ul>
+<!-- Mobile Account Shortcuts -->
+<div class="mobile-menu-actions">
+<button data-open-panel="account" type="button">
+<i aria-hidden="true" class="fa-regular fa-user"></i>
+        Login / Create Account
+    </button>
+<button data-open-panel="cart" type="button">
+<i aria-hidden="true" class="fa-solid fa-bag-shopping"></i>
+        My Shopping Bag
+        <span aria-live="polite" class="cart-count">0</span>
+</button>
+</div>
+<p class="mobile-menu-footer">
+            Thoughtful skincare, one step at a time.
+        </p>
+</aside>
+<!-- Shared overlay for cart and account panels -->
+<div class="panel-overlay" data-close-panel=""></div>
+<!-- CART DRAWER -->
+<aside aria-hidden="true" aria-label="Shopping cart" class="side-panel cart-panel" id="cart-panel" inert="">
+<div class="panel-header">
+<div>
+<p class="panel-eyebrow">YOUR GLOWORA PICKS</p>
+<h2>Your Cart <span class="cart-count">0</span></h2>
+</div>
+<button aria-label="Close cart" class="panel-close" data-close-panel="" type="button">
+            ×
+        </button>
+</div>
+<div aria-live="polite" class="cart-content">
+<div class="cart-empty">
+<i aria-hidden="true" class="fa-solid fa-bag-shopping"></i>
+<h3>Your bag is waiting</h3>
+<p>You haven't added any products yet.</p>
+<button class="panel-primary" data-continue-shopping="" type="button">
+                Continue Shopping
+            </button>
+</div>
+<div class="cart-items"></div>
+</div>
+<div class="cart-footer" hidden="">
+<div class="cart-subtotal">
+<span>Subtotal</span>
+<strong class="cart-total">Rs. 0</strong>
+</div>
+<p>Shipping charges are calculated at checkout.</p>
+<button class="panel-primary checkout-button" type="button">
+            Proceed to Checkout
+        </button>
+</div>
+</aside>
+<!-- ACCOUNT DRAWER -->
+<aside aria-hidden="true" aria-label="Your account" class="side-panel account-panel" id="account-panel" inert="">
+<div class="panel-header">
+<div>
+<p class="panel-eyebrow">WELCOME TO GLOWORA</p>
+<h2 class="account-panel-title">My Account</h2>
+</div>
+<button aria-label="Close account" class="panel-close" data-close-panel="" type="button">
+            ×
+        </button>
+</div>
+<!-- Login -->
+<form class="account-form" id="login-form">
+<p class="account-intro">Sign in to your account.</p>
+<label for="login-email">Email Address</label>
+<input autocomplete="email" id="login-email" name="email" placeholder="you@example.com" required="" type="email"/>
+<label for="login-password">Password</label>
+<input autocomplete="current-password" id="login-password" name="password" placeholder="Enter your password" required="" type="password"/>
+<button class="text-action" data-account-view="forgot" type="button">
+            Forgot Password?
+        </button>
+<button class="panel-primary" type="submit">
+            Login
+        </button>
+<p class="account-switch">
+            Don't have an account?
+            <button class="text-action" data-account-view="register" type="button">
+                Create Account
+            </button>
+</p>
+<p aria-live="polite" class="account-message"></p>
+</form>
+<!-- Create Account -->
+<form class="account-form" hidden="" id="register-form">
+<p class="account-intro">Create your GLOWORA account.</p>
+<label for="register-name">Full Name</label>
+<input autocomplete="name" id="register-name" name="name" placeholder="Your full name" required="" type="text"/>
+<label for="register-email">Email Address</label>
+<input autocomplete="email" id="register-email" name="email" placeholder="you@example.com" required="" type="email"/>
+<label for="register-password">Create Password</label>
+<input autocomplete="new-password" id="register-password" minlength="8" name="password" placeholder="At least 8 characters" required="" type="password"/>
+<button class="panel-primary" type="submit">
+            Create Account
+        </button>
+<p class="account-switch">
+            Already registered?
+            <button class="text-action" data-account-view="login" type="button">
+                Login
+            </button>
+</p>
+<p aria-live="polite" class="account-message"></p>
+</form>
+<!-- Forgot Password -->
+<form class="account-form" hidden="" id="forgot-form">
+<p class="account-intro">
+            Enter your email address to request a password reset.
+        </p>
+<label for="forgot-email">Email Address</label>
+<input autocomplete="email" id="forgot-email" name="email" placeholder="you@example.com" required="" type="email"/>
+<button class="panel-primary" type="submit">
+            Request Reset Link
+        </button>
+<p class="account-switch">
+            Remember your password?
+            <button class="text-action" data-account-view="login" type="button">
+                Back to Login
+            </button>
+</p>
+<p aria-live="polite" class="account-message"></p>
+</form>
+</aside>
+</header>
+<main><section class="category-page product-range" id="shop"><div class="range-heading"><p class="range-subtitle">GLOWORA SKINCARE</p><h1>Moisturizer Collection</h1><p class="category-description">Discover thoughtful GLOWORA moisturizer essentials for your skincare routine.</p></div><div class="category-product-grid product-track"><article class="range-card">
+<div class="range-image">
+<img alt="Brightening cream" loading="lazy" src="./assets/images/skin brightening img/brightening cream.jpg"/>
+<span class="image-title">Brightening Cream</span>
+<div class="product-hover">
+<h3>Brightening Cream</h3>
+<p><strong>Key Ingredients</strong></p>
+<p>Niacinamide · Vitamin E</p>
+<p>Helps moisturize skin and improve the look of uneven tone.</p>
+</div>
+</div>
+<h3>Brightening Cream</h3>
+<p class="range-price">Rs. 2,100</p>
+<button class="add-to-cart">Add to Cart</button>
+</article><article class="range-card">
+<div class="range-image">
+<img alt="Night cream" loading="lazy" src="./assets/images/skin brightening img/night cream.jpg"/>
+<span class="image-title">Night Cream</span>
+<div class="product-hover">
+<h3>Night Cream</h3>
+<p><strong>Key Ingredients</strong></p>
+<p>Hyaluronic Acid · Vitamin E</p>
+<p>Moisture for your evening routine.</p>
+</div>
+</div>
+<h3>Night Cream</h3>
+<p class="range-price">Rs. 2,000</p>
+<button class="add-to-cart">Add to Cart</button>
+</article><article class="range-card">
+<div class="range-image">
+<img alt="Daily face lotion" loading="lazy" src="./assets/images/skin brightening img/daily face lotion.jpg"/>
+<span class="image-title">Daily Face Lotion</span>
+<div class="product-hover">
+<h3>Daily Face Lotion</h3>
+<p><strong>Key Ingredients</strong></p>
+<p>Shea Butter · Glycerin</p>
+<p>Everyday moisture for soft-feeling skin.</p>
+</div>
+</div>
+<h3>Daily Face Lotion</h3>
+<p class="range-price">Rs. 1,650</p>
+<button class="add-to-cart">Add to Cart</button>
+</article><article class="range-card">
+<div class="range-image">
+<img alt="Oil Control Moisturizer" loading="lazy" src="./assets/images/clear skin img/oil control moisturizer.jpg"/>
+<span class="image-title">Oil Control Moisturizer</span>
+<div class="product-hover">
+<h3>Oil Control Moisturizer</h3>
+<p><strong>Key Ingredients</strong></p>
+<p>Glycerin · Niacinamide</p>
+<p>Lightweight moisture for everyday skincare.</p>
+</div>
+</div>
+<h3>Oil Control Moisturizer</h3>
+<p class="range-price">Rs. 1,650</p>
+<button class="add-to-cart" type="button">Add to Cart</button>
+</article><article class="range-card">
+<div class="range-image">
+<img alt="Firming Day Cream" loading="lazy" src="./assets/images/anti aging img/firming day cream.jpg"/>
+<span class="image-title">Firming Day Cream</span>
+<div class="product-hover">
+<h3>Firming Day Cream</h3>
+<p><strong>Key Ingredients</strong></p>
+<p>Peptides · Vitamin E</p>
+<p>Daily moisture for a soft, smooth feel.</p>
+</div>
+</div>
+<h3>Firming Day Cream</h3>
+<p class="range-price">Rs. 2,200</p>
+<button class="add-to-cart" type="button">Add to Cart</button>
+</article><article class="range-card">
+<div class="range-image">
+<img alt="Barrier Comfort Cream" loading="lazy" src="./assets/images/sensitive img/barrier comfort cream.jpg"/>
+<span class="image-title">Barrier Comfort Cream</span>
+<div class="product-hover">
+<h3>Barrier Comfort Cream</h3>
+<p><strong>Key Ingredients</strong></p>
+<p>Ceramides · Glycerin</p>
+<p>Moisture to support a comfortable skin feel.</p>
+</div>
+</div>
+<h3>Barrier Comfort Cream</h3>
+<p class="range-price">Rs. 1,950</p>
+<button class="add-to-cart" type="button">Add to Cart</button>
+</article></div></section></main>
+<!-- GLOWORA FOOTER -->
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="footer-logo" href="./index.html"><span aria-hidden="true">❧</span> GLOWORA</a>
+      <p>Thoughtful skincare, one step at a time. Simple rituals for your everyday glow.</p>
+      <p class="footer-made">Proudly imagined in Pakistan.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Explore</h3>
+      <a href="./index.html">Shop All</a>
+      <a href="./serum.html">Serum</a>
+      <a href="./moisturizer.html">Moisturizer</a>
+      <a href="./cleanser.html">Cleanser</a>
+      <a href="./routine.html">Routine Guide</a>
+    </div>
+    <div class="footer-column">
+      <h3>GLOWORA</h3>
+      <a href="./about.html">About Us</a>
+      <a href="./index.html#shipping-process">Shipping Process</a>
+      <a href="./index.html#customer-reviews">Customer Reviews</a>
+      <a href="./index.html#faqs">FAQs</a>
+    </div>
+    <div class="footer-newsletter">
+      <h3>A little glow in your inbox</h3>
+      <p>Get skincare tips and updates from GLOWORA.</p>
+      <form class="newsletter-form">
+        <label class="visually-hidden" for="footer-email">Email address</label>
+        <input id="footer-email" type="email" placeholder="Your email address" required>
+        <button type="submit" aria-label="Sign up for updates"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      </form>
+      <p class="newsletter-message" aria-live="polite"></p>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 GLOWORA. All rights reserved.</span><span>Carefully considered. Made for your routine.</span></div>
+</footer>
+<script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".nav-links a,.mobile-nav-links a").forEach(function(a){var u=new URL(a.href,location.href);var here=location.pathname.replace(/\/$/,"");var there=u.pathname.replace(/\/$/,"");var active=here===there&&!u.hash;a.classList.toggle("active",active);if(active)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});});</script></body>
+</html>

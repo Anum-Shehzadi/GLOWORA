@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complete your GLOWORA skincare order.">
+  <title>Checkout | GLOWORA</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./checkout.css">
+  <script src="./checkout.js" defer></script>
+</head>
+<body class="checkout-page">
+  <header class="checkout-header">
+    <a class="checkout-brand" href="./index.html" aria-label="GLOWORA home"><span>❧</span> GLOWORA</a>
+    <a class="checkout-back" href="./index.html">Continue shopping <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="checkout-shell">
+    <div class="checkout-heading">
+      <p class="checkout-eyebrow">YOUR GLOWORA ORDER</p>
+      <h1>Checkout</h1>
+      <p>Just a few details and your skincare favourites will be ready.</p>
+    </div>
+    <div class="checkout-layout">
+      <section class="checkout-form-card" aria-labelledby="delivery-heading">
+        <form id="checkout-form">
+          <div class="checkout-section-heading"><span>01</span><div><h2 id="delivery-heading">Contact information</h2><p>Where can we reach you about your order?</p></div></div>
+          <div class="checkout-fields">
+            <label class="field-wide">Email address<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+            <label>First name<input type="text" name="firstName" autocomplete="given-name" placeholder="First name" required></label>
+            <label>Last name<input type="text" name="lastName" autocomplete="family-name" placeholder="Last name" required></label>
+            <label class="field-wide">Phone number<input type="tel" name="phone" autocomplete="tel" placeholder="03XX XXXXXXX" pattern="[0-9+() -]{10,18}" required></label>
+          </div>
+          <div class="checkout-divider"></div>
+          <div class="checkout-section-heading"><span>02</span><div><h2>Delivery address</h2><p>Enter the address where you would like your order delivered.</p></div></div>
+          <div class="checkout-fields">
+            <label class="field-wide">Street address<input type="text" name="address" autocomplete="street-address" placeholder="House number, street and area" required></label>
+            <label>City<input type="text" name="city" autocomplete="address-level2" placeholder="City" required></label>
+            <label>Postal code <small>(optional)</small><input type="text" name="postalCode" autocomplete="postal-code" placeholder="Postal code"></label>
+            <label class="field-wide">Order note <small>(optional)</small><textarea name="note" rows="3" placeholder="Any delivery instructions?"></textarea></label>
+          </div>
+          <div class="checkout-divider"></div>
+          <div class="checkout-section-heading"><span>03</span><div><h2>Payment method</h2><p>Choose how you would like to pay.</p></div></div>
+          <label class="payment-choice"><input type="radio" name="payment" value="cod" checked><span><strong>Cash on Delivery</strong><small>Pay in cash when your parcel arrives.</small></span><span class="payment-tag">AVAILABLE</span></label>
+          <p class="checkout-demo-note">This is a front-end demonstration. No payment is collected and no order is sent to a store or courier.</p>
+          <p id="checkout-error" class="checkout-message" role="alert"></p>
+          <button class="checkout-submit" type="submit">Place demo order <span aria-hidden="true">→</span></button>
+          <a class="checkout-return" href="./index.html">← Return to shopping</a>
+        </form>
+        <section class="checkout-success" id="checkout-success" hidden aria-live="polite">
+          <div class="success-mark">✓</div><p class="checkout-eyebrow">ORDER PREVIEW COMPLETE</p><h2>Thank you!</h2>
+          <p>Your checkout form was validated successfully. This is a demo only: no real order, delivery request or payment has been created.</p>
+          <a class="checkout-submit success-link" href="./index.html">Back to GLOWORA</a>
+        </section>
+      </section>
+      <aside class="order-summary-card" aria-labelledby="summary-heading">
+        <div class="summary-title"><div><p class="checkout-eyebrow">YOUR SELECTION</p><h2 id="summary-heading">Order summary</h2></div><span id="summary-count">0 items</span></div>
+        <div id="checkout-items" class="checkout-items"></div>
+        <div id="checkout-empty" class="checkout-empty" hidden><p>Your bag is empty.</p><a href="./index.html">Explore products</a></div>
+        <div class="summary-totals"><div><span>Subtotal</span><strong id="checkout-subtotal">Rs. 0</strong></div><div><span>Shipping</span><strong>Calculated later</strong></div><div class="summary-grand-total"><span>Subtotal (shipping excluded)</span><strong id="checkout-total">Rs. 0</strong></div></div>
+        <p class="summary-footnote">Shipping charges and delivery availability are confirmed separately. Product prices are shown in Pakistani Rupees.</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="checkout-footer"><span>GLOWORA</span><p>Thoughtful skincare, one step at a time.</p></footer>
+</body>
+</html>
